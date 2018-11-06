@@ -1,0 +1,357 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    width: 100%;    
+}
+.bar{
+    background: rgb(147, 21, 87);
+    padding: 20px;
+    margin: 0;
+}
+.title{
+    float: right;
+    display:block;    
+    width: 20%;
+    padding: 10px;
+    border: 2px solid rgb(147, 21, 87);
+    border-radius: 0 25px;
+}
+header::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.wrap{
+    margin: 0 auto;
+    padding: 15px 5px;
+    width: 80%;
+    min-width: 820px; 
+}
+nav , main , .carousel , .navbar , .collapse  { 
+    padding: 20px;    
+    border-bottom: 3px solid rgb(168, 164, 164);
+}
+nav{
+    position: relative;
+    z-index: 1;
+}
+.head{
+    color: rgb(74, 131, 133);
+}
+.descript{
+    font-size: 18px;
+}
+.descript > i{
+    font-weight: bold;
+}
+/*-------------- CLICKABLE DROPDOWN MENU --------------*/
+li,ul{
+    list-style: none;
+}
+.main_menu{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    height: 65px;
+}
+.link_btn{
+    background: rgb(147, 21, 87);
+    padding: 10px;
+    border-radius: 10px;    
+    min-width: 200px;
+    cursor: pointer;
+}
+.link{  
+    text-decoration: none;
+    color: wheat;
+    font-size: 20px;
+}
+.link:hover{
+    color: white;    
+}
+.dropIcon{
+    margin-left: 20px;
+}
+.dropdown{
+    background: rgb(236, 229, 236); 
+    border-radius: 10px; 
+    margin: 10px;  
+}
+.dropdown_content{
+    display:none;
+    padding: 0;
+    text-align: center;
+    -webkit-box-shadow: 10px 10px 38px -4px rgba(0,0,0,0.63);
+    -moz-box-shadow: 10px 10px 38px -4px rgba(0,0,0,0.63);
+    box-shadow: 10px 10px 38px -4px rgba(0,0,0,0.63);
+}
+.dropdown_content > li{
+    padding: 10px;
+    cursor: pointer;
+}
+.dropdown_content :hover{
+    background: rgb(74, 131, 133);
+}
+.dropdown_content :hover > a{
+    color: antiquewhite;
+}
+.dropdown_content > li > a {
+    text-decoration: none;
+    color: rgb(147, 21, 87); 
+    font-size: 18px;
+}
+
+/*--------------CAROUSEL--------------*/
+
+.container{
+    height: 100px;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    border: 3px solid rgb(147, 21, 87);
+    overflow: hidden;
+}
+#prev , #next{
+    position: absolute;
+    top: 40%; 
+    background: rgb(147, 21, 87);
+    color: antiquewhite;
+    padding: 5px;
+    cursor: pointer;
+}
+#prev{
+    left: 0;
+}
+#next{
+    right: 0;
+}
+#prev:hover , #next:hover{
+    color: rgb(147, 21, 87);
+    background: antiquewhite;
+}
+.slide{
+    font-size: 90px;
+    position: absolute;
+    left: 50px;
+    text-align: center;
+    bottom: -4px;
+    margin: 0 ;
+    display: none;
+}
+.current{
+    display: block;
+    animation: slideUp 1s ease 0s 1;
+}
+.slideDown{    
+    animation: slideDown 1s ease 0s 1;
+    display: block;
+    bottom: -100px;
+}
+@-o-keyframes slideUp{              /*----- OPERA -----*/
+    from{   bottom: -100px;
+            transform: scale(0,0);
+        }
+    to {    bottom: -4px;
+            transform: scale(1,1);
+        }
+}
+@-moz-keyframes slideUp{            /*----- MOZILLA -----*/
+    from{   bottom: -100px;
+            transform: scale(0,0);
+        }
+    to {    bottom: -4px;
+            transform: scale(1,1);
+        }
+}
+@-webkit-keyframes slideUp{         /*----- SAFARI -----*/
+    from{   bottom: -100px;
+            transform: scale(0,0);
+        }
+    to {    bottom: -4px;
+            transform: scale(1,1);
+        }
+} 
+@keyframes slideUp{
+    from{   bottom: -100px;
+            transform: scale(0,0);
+        }
+    to {    bottom: -4px;
+            transform: scale(1,1);
+        }
+}
+@-o-keyframes slideDown{
+    from {  bottom: -4px;
+            transform: scale(1,1);
+            
+    }
+    to{     bottom: -100px;
+            transform: scale(0,0);
+            
+    }
+}
+@-webkit-keyframes slideDown{
+    from {  bottom: -4px;
+            transform: scale(1,1);
+            
+    }
+    to{     bottom: -100px;
+            transform: scale(0,0);
+            
+    }
+}
+@-moz-keyframes slideDown{
+    from {  bottom: -4px;
+            transform: scale(1,1);
+            
+    }
+    to{     bottom: -100px;
+            transform: scale(0,0);
+            
+    }
+}
+@keyframes slideDown{
+    from {  bottom: -4px;
+            transform: scale(1,1);
+            
+    }
+    to{     bottom: -100px;
+            transform: scale(0,0);
+            
+    }
+}
+/*-------------- NAVIGATION BAR SWITCH--------------*/
+.tabList {
+    display: flex;
+}
+.tabList > li{
+    width: 100%;
+    margin: 1px;
+}
+.allTabs{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 14px;   
+    border-radius: 7px;    
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+.allTabs:hover{
+    color: rgb(190, 80, 137);
+}
+.currentTab{
+    background: rgb(147, 21, 87);
+    color: wheat;
+}
+.currentTab:hover{
+    color: white;
+}
+.tab_container{
+    margin: 0 auto;
+    border: 2px solid rgb(147, 21, 87);
+    border-radius: 50%;
+    background: rgb(190, 80, 137);
+    color: white;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    padding: 40px 50px;
+}
+.tab_content{
+    display: none;
+    font-size: 20px;
+}
+/*-------------- COLLAPSIBLE ELEMENTS --------------*/
+
+.collapse_title{
+    color: wheat;
+    background: rgb(147, 21, 87);
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 0;
+    border-radius: 6px 6px 0 0;
+    width: 200px;
+    cursor: pointer;
+}
+.collapse_title:hover{
+    color: white;
+}
+.collapse_content{
+    border: 1px solid rgb(168, 164, 164);     
+    border-width: 0px 1px ;
+    border-radius: 0 5px;     
+    font-size: 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out,  border-width 0.1s ease-in-out;
+}
+.collapse_content > p {
+    padding: 20px;    
+}
+.collapse_content.active{   
+    max-height: 150px; 
+    border-width: 1px;
+    -webkit-box-shadow: 3px 7px 31px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 7px 31px 1px rgba(0,0,0,0.75);
+    box-shadow: 3px 7px 31px 1px rgba(0,0,0,0.75);   
+}
+
+/*-------------- MODAL POPUP --------------*/
+
+#popup,#close{
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgb(147, 21, 87);
+    color: wheat; 
+    cursor: pointer;      
+}
+#popup:hover, #close:hover{
+    color: white;
+}
+.modal_container{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1; 
+    transform: scale(0);
+    transition: background-color 850ms ease-in-out;
+}
+.modal_container > .modal_content{
+    margin: 50px auto;
+    font-size: 18px;
+    width: 500px;
+    border-radius: 20px;
+    background: white;
+    padding: 30px;  
+    position: relative;
+    transform: scale(0);
+    transition: all 950ms ease-in-out 200ms;
+}
+.modal_content > p{
+    margin-bottom: 100px;  
+}
+#close{
+    float: right;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.modal_container.active{
+    background-color: rgba(0,0,0,0.5);
+    transform: scale(1);
+ }
+.modal_container.active > .modal_content{
+    transform: scale(1);    
+}
+.active{
+    display: block;
+}

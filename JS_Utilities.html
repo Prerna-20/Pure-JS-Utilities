@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pure JS Utilities</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/JS_Utilities.css">
+</head>
+<body>    
+    <header>
+        <p class="bar"></p>
+        <h1 class="title">Pure JS Utilities</h1>
+    </header>
+    <div class="wrap">
+    <nav>
+        <h2 class="head">On Click Dropdown Menus</h2>
+        <p class="descript">Using <i>Vanilla Javascript</i></p>
+    <ul class="main_menu">
+      <li> <div class="dropdown">
+          <button class="link_btn">
+         <a href="#" class="link">About Us 
+            <i class="fas fa-caret-down dropIcon"></i>
+        </a>
+    </button>
+        <ul class="dropdown_content">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Alumni</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Careers</a></li>
+        </ul>
+    </div>
+</li>
+<li><div class="dropdown">
+    <button class="link_btn"> 
+         <a href="#" class="link">Academics
+            <i class="fas fa-caret-down dropIcon"></i>
+         </a>
+    </button>
+        <ul class="dropdown_content">
+            <li><a href="#">Academic Affairs</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="#">List Of Programs</a></li>
+            <li><a href="#">International Affairs</a></li>
+        </ul>    
+    </div>
+</li>
+<li><div class="dropdown">
+   <button class="link_btn">
+        <a href="#" class="link">Examinations 
+            <i class="fas fa-caret-down dropIcon"></i>
+        </a>
+    </button>
+        <ul class="dropdown_content">
+            <li><a href="#">Notices</a></li>
+            <li><a href="#">Datesheet</a></li>
+            <li><a href="#">Result</a></li>
+            <li><a href="#">Regulation Forms</a></li>
+        </ul>    
+    </div>
+</li>
+</ul> <!----------END OF DROPDOWN MENU-------->
+    </nav>
+    <main>
+        <div class="carousel">
+        <h2 class="head">Carousel Implemetation</h2>
+        <p class="descript">Using <i>Vanilla Javascript</i></p>
+        <div class="container">
+           <i class="fas fa-chevron-circle-left" id="prev"></i>
+           <p class="slide current">Prerna</p>
+           <p class="slide">Shree</p>
+           <p class="slide">Anku</p>
+           <p class="slide">Puneeta</p>
+           <p class="slide">Neha</p>
+           <i class="fas fa-chevron-circle-right" id="next"></i>
+           </div>
+        </div>  <!----------END OF CAROUSEL-------->
+        <div class="navbar">
+        <h2 class="head">Navigation Tabs Switch Implemetation</h2>
+        <p class="descript">Using <i>Vanilla Javascript</i></p>
+        <ul class="tabList">
+            <li><a  class="allTabs" href="#home">Home</a></li>            
+            <li><a href="#tab1" class="allTabs currentTab" >Tab 1</a></li>            
+            <li><a href="#tab2" class="allTabs" >Tab 2</a></li>
+            <li><a href="#tab3" class="allTabs" >Tab 3</a></li>
+            <li><a href="#tab4" class="allTabs" >Tab 4</a></li>
+            <li><a href="#tab5" class="allTabs" >Tab 5</a></li>
+            <li><a href="#tab6" class="allTabs" >Tab 6</a></li>
+        </ul>
+        <div class="tab_container">
+        <h2>Switched Tab Content</h2>
+        <div class="tab_content" id="home">
+            <p>Home</p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+        <div class="tab_content active" id="tab1">
+            <p>Tab 1</p>
+            Proin elit elit, ornare eget porta quis, interdum.
+        </div>
+        <div class="tab_content" id="tab2">
+            <p>Tab 2</p>
+            Nam varius eros vel leo ultrices volutpat.
+        </div>
+        <div class="tab_content" id="tab3">
+                <p>Tab 3</p>
+            Etiam auctor auctor volutpat.
+        </div>
+        <div class="tab_content" id="tab4">
+                <p>Tab 4</p>
+                Class aptent taciti sociosqu ad litora torquent
+        </div>
+        <div class="tab_content" id="tab5">
+                <p>Tab 5</p>
+                Per conubia nostra, per inceptos himenaeos.
+        </div>
+        <div class="tab_content" id="tab6">
+                <p>Tab 6</p>
+                Maecenas luctus felis et porttitor tincidunt.
+        </div>
+        </div>
+        </div> <!----------END OF NAVIGATION TAB-------->
+        <div class="collapse">
+        <h2 class="head">Collapsing Elements </h2>
+        <p class="descript">On-click, Using <i>Vanilla Javascript</i></p>
+        <ul>
+            <li><h3 class="collapse_title">Collapsible one</h3>
+                <div class="collapse_content">
+                   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu lacus venenatis, convallis metus a, convallis mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus tristique massa ut erat vulputate, sed mollis tellus faucibus. Donec lobortis pellentesque urna, at malesuada augue laoreet quis. </p>
+                </div>
+            </li>
+            <li> <h3 class="collapse_title"> Collapsible Two</h3>
+                <div class="collapse_content">
+                       <p> Aliquam eleifend bibendum ligula, eu commodo ipsum condimentum eu. Curabitur tincidunt vel turpis non eleifend. Nullam ac lacus tortor. Aenean at tortor in mi tempus vulputate non ut lacus. Quisque id urna id nisi congue euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis felis quis est accumsan gravida.</p>
+                </div>
+            </li>
+           <li> <h3 class="collapse_title">Collapsible Three</h3>
+                <div class="collapse_content">
+                        <p>Sed ornare porttitor libero, sed ullamcorper velit pellentesque at. Vestibulum scelerisque mi ut tellus tempor auctor. Aliquam tincidunt metus eu accumsan lobortis. Suspendisse quis metus malesuada, lacinia odio quis, lobortis nibh. Fusce rhoncus, purus ac rutrum ultricies, orci tortor sodales nisl, non tempus nisi nunc nec leo. </p>
+                </div>
+            </li>
+        </ul>
+        </div><!----------END OF COLLAPSIBLE-------->
+        <div>
+            <h2 class="head">Modal Pop up Implemetation</h2>
+            <p class="descript">Using <i>Vanilla Javascript</i></p>
+                <button id="popup">Modal Popup</button>
+                <div class="modal_container">
+                <div class="modal_content">
+                    <h1>Modal Popup Header</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec sagittis diam. Suspendisse efficitur nec nunc auctor consectetur. Donec pretium augue eget augue sodales mollis. Suspendisse sed finibus elit, id dictum mi. Fusce tincidunt sapien ut sapien ullamcorper placerat. Nunc id ullamcorper tellus. Morbi quis mattis lectus. Nulla hendrerit in nisi et blandit. Praesent convallis viverra orci, et auctor enim posuere sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla malesuada tellus eu lobortis ultrices.</p>
+                    <button id="close">Close</button>
+                </div>
+                </div>
+        </div> <!----------END OF MODAL POPUP --------> 
+    </main>
+    </div>
+     <script src="js/JS_Utilities.js"></script>
+    </body>
+</html>
