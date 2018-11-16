@@ -286,7 +286,8 @@ li,ul{
     font-size: 18px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out,  border-width 0.1s ease-in-out;
+    box-shadow: none;
+    transition: max-height 0.5s ease-in-out,  border-width 0.6s ease-in-out, box-shadow 0.5s ease-in-out;/*Transitions applied on collapsible being closed*/
 }
 .collapse_content > p {
     padding: 20px;    
@@ -296,7 +297,8 @@ li,ul{
     border-width: 1px;
     -webkit-box-shadow: 3px 7px 31px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 7px 31px 1px rgba(0,0,0,0.75);
-    box-shadow: 3px 7px 31px 1px rgba(0,0,0,0.75);   
+    box-shadow: 3px 7px 31px 1px rgba(0,0,0,0.75); 
+    transition: max-height 0.5s ease-in-out, border-width 0.3s ease-in-out, box-shadow 0.5s ease-in-out;  /*Transitions applied on collapsible being opened*/
 }
 
 /*-------------- MODAL POPUP --------------*/
@@ -314,16 +316,17 @@ li,ul{
     color: white;
 }
 .modal_container{
-    background-color: white;
+    background-color: transparent;
     width: 100%;
     height: 100%;
     padding: 20px;
     position: fixed;
     left: 0;
     bottom: 0;
-    z-index: 1; 
+    z-index: 1;     
     transform: scale(0);
-    transition: background-color 850ms ease-in-out;
+    transition: background-color 750ms ease-in-out 100ms, transform 100ms ease-in-out 750ms;/*Closing Modal Pop up Transition*/
+
 }
 .modal_container > .modal_content{
     margin: 50px auto;
@@ -334,7 +337,7 @@ li,ul{
     padding: 30px;  
     position: relative;
     transform: scale(0);
-    transition: all 950ms ease-in-out 200ms;
+    transition: all 950ms ease-in-out;
 }
 .modal_content > p{
     margin-bottom: 100px;  
@@ -348,9 +351,11 @@ li,ul{
 .modal_container.active{
     background-color: rgba(0,0,0,0.5);
     transform: scale(1);
+    transition: background-color 750ms ease-in ;/* Opening Modal Pop up Transition */
  }
 .modal_container.active > .modal_content{
-    transform: scale(1);    
+    transform: scale(1); 
+    transition: all 950ms ease-in-out 200ms ; /*200ms delay for background colr transition to start*/   
 }
 .active{
     display: block;
