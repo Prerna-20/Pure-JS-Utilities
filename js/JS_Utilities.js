@@ -90,7 +90,6 @@ for( i = 0; i<collapse_title.length; i++){
 /*----------------- MODAL POPUP FUNCTIONALITY ----------------- */
 
 var modal = document.getElementById('popup');
-console.log(modal);
 var close = document.getElementById('close');
 var popup;
 modal.addEventListener('click' , function(){
